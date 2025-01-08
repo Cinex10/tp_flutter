@@ -1,106 +1,146 @@
-# Flutter Todo List Application
+# Advanced Flutter Todo App
 
-A minimalist yet functional Todo List application built with Flutter, demonstrating the use of stateless and stateful widgets.
+Une application Todo List avancée développée avec Flutter, démontrant l'utilisation de fonctionnalités avancées comme BLoC, animations, et thèmes dynamiques.
 
-## 📱 Features
+## 📱 Fonctionnalités
 
-- ✅ Create new tasks
-- 🔄 Mark tasks as completed
-- 🗑️ Delete tasks
-- 🔍 Filter tasks (All/Active/Completed)
-- 📊 Track task completion progress
+### Gestion des Tâches
+- ✅ Création de tâches avec titre et date d'échéance
+- 🔄 Marquage des tâches comme terminées
+- 🗑️ Suppression des tâches
+- 🔍 Filtrage (Toutes/Actives/Terminées)
+- 📊 Compteur de progression
 
-## 🚀 Getting Started
+### Interface Utilisateur
+- 🌓 Thème clair/sombre avec persistance
+- ✨ Animations fluides
+- 💫 Transitions élégantes
+- 📱 Design responsive
+- 🎨 Material Design 3
 
-### Prerequisites
+### Fonctionnalités Techniques
+- 🔄 Gestion d'état avec BLoC Pattern
+- 💾 Persistance des données
+- 🌍 Internationalisation (FR/EN)
+- ⚡ Performances optimisées
+- 🎯 Architecture propre
 
-- Flutter SDK (latest stable version)
+## 🚀 Installation
+
+### Prérequis
+
+- Flutter SDK (dernière version stable)
 - Dart SDK
-- Android Studio / VS Code with Flutter extensions
+- Un éditeur (VS Code, Android Studio, etc.)
 - Git
 
-### Installation
+### Configuration
 
-1. Clone the repository
+1. Clonez le repository
 ```bash
-git clone https://github.com/Cinex10/flutter_homework.git
+git clone https://github.com/yourusername/advanced_todo_app.git
 ```
 
-2. Navigate to the project directory
+2. Accédez au dossier du projet
 ```bash
-cd flutter_homework
+cd advanced_todo_app
 ```
 
-3. Get dependencies
+3. Installez les dépendances
 ```bash
 flutter pub get
 ```
 
-4. Run the app
+4. Lancez l'application
 ```bash
 flutter run
 ```
 
-## 📁 Project Structure
+## 📂 Structure du Projet
 
 ```
 lib/
-├── main.dart           // Application entry point
-├── screens/           // Main screens
+├── main.dart           # Point d'entrée
+├── app.dart            # Configuration de l'application
+├── blocs/             # Gestion d'état
+│   ├── todo_bloc.dart
+│   └── theme_bloc.dart
+├── models/            # Modèles de données
+│   └── todo.dart
+├── screens/           # Écrans
 │   └── home_page.dart
-├── widgets/           // Reusable components
-│   ├── todo_list.dart
-│   ├── todo_item.dart
-│   ├── add_todo_form.dart
-│   ├── filter_buttons.dart
-│   └── task_counter.dart
-└── models/           // Data models
-    └── todo.dart
+├── services/          # Services
+│   └── storage_service.dart
+├── theme/            # Configuration des thèmes
+│   └── app_theme.dart
+├── utils/            # Utilitaires
+│   └── date_formatter.dart
+└── widgets/          # Widgets réutilisables
+    ├── animated_todo_item.dart
+    ├── add_todo_bottom_sheet.dart
+    └── custom_widgets.dart
 ```
 
-## 🏗️ Architecture
+## 🛠️ Technologies Utilisées
 
-The application follows a simple yet effective architecture:
+- **Flutter**: Framework UI
+- **Provider**: Injection de dépendances
+- **RxDart**: Programmation réactive
+- **SharedPreferences**: Stockage local
+- **Intl**: Internationalisation
+- **Material Design 3**: Design system
 
-- **Models**: Data structures
-- **Screens**: Main application pages
-- **Widgets**: Reusable UI components
+## 📦 Dépendances Principales
 
-### State Management
+```yaml
+dependencies:
+  flutter:
+    sdk: flutter
+  flutter_localizations:
+    sdk: flutter
+  provider: ^6.0.5
+  rxdart: ^0.27.7
+  shared_preferences: ^2.2.0
+  intl: ^0.18.1
+```
 
-- Local state management using `setState`
-- Centralized state in `HomePage`
-- Props and callback pattern for widget communication
+## 🎯 Architecture
 
-## 🎯 Widget Types
+L'application suit le pattern BLoC (Business Logic Component) avec une architecture en couches :
 
-### Stateless Widgets
-- `TodoItem`: Individual todo display
-- `FilterButtons`: Filter options
-- `TaskCounter`: Progress display
+1. **UI Layer**: Widgets et écrans
+2. **Business Logic Layer**: BLoCs
+3. **Data Layer**: Services et modèles
 
-### Stateful Widgets
-- `HomePage`: Main state container
-- `AddTodoForm`: New todo input
-- `TodoList`: Task list management
+## 🔄 Gestion d'État
 
-## 🛠️ Technical Stack
+- Utilisation du pattern BLoC
+- Streams pour la réactivité
+- Provider pour l'injection de dépendances
+- Persistance automatique des données
 
-- Flutter SDK
-- Dart programming language
-- Material Design 3
-- Built-in Flutter widgets
+## 🎨 Thèmes
 
-## 📱 Screenshots
+L'application supporte deux thèmes :
+- **Thème Clair**: Design épuré et lumineux
+- **Thème Sombre**: Mode sombre élégant
 
-![Home Screen](attachments/tp1_home.png)
+Le choix du thème est automatiquement sauvegardé.
 
-## 👥 Authors
+## 🤝 Contribution
 
-- Yassine Driss - *Initial work* - [Cinex10](https://github.com/Cinex10)
+1. Forkez le projet
+2. Créez votre branche (`git checkout -b feature/AmazingFeature`)
+3. Committez vos changements (`git commit -m 'Add some AmazingFeature'`)
+4. Poussez vers la branche (`git push origin feature/AmazingFeature`)
+5. Ouvrez une Pull Request
 
-## 🙏 Acknowledgments
 
-- Flutter team for the amazing framework
-- Material Design for the UI guidelines
-- All contributors who will help improve this project
+## 👥 Auteurs
+
+- **Yassine DRISS** - *Travail initial* - [](https://github.com/Cinex10)
+- **Abdellah Medles** - *Travail initial* - [](https://github.com/abdellah-med)
+
+---
+
+Fait avec ❤️ et Flutter
